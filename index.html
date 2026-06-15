@@ -309,20 +309,22 @@
     </div>
   </section>
 
-  <!-- Teaser video -->
+<!-- Teaser video -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- 替换为 YouTube 嵌入 iframe -->
-      <iframe 
-        id="tree"
-        class="teaser-video"
-        src="https://www.youtube.com/embed/j25D0YevBWc"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
+      <!-- 新增比例容器 -->
+      <div class="video-wrapper">
+        <iframe 
+          id="tree"
+          class="teaser-video"
+          src="https://www.youtube.com/embed/j25D0YevBWc?autoplay=1&mute=1&loop=1&playlist=j25D0YevBWc"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
 
       <h2 class="subtitle custom-video-desc">
         <strong> Movie 1:</strong> The assistance performance of ExoTraj in complex outdoor environments. ExoTraj policy performs real-time trajectory prediction and torque optimization. It supports a range of assistance tasks, including walking on uneven grass, climbing rocky slopes, variable-speed running, obstacle crossing, and sudden stops and starts. The policy can be adapted to high-dynamic tasks, delivering real-time and efficient assistance.
@@ -331,8 +333,6 @@
   </div>
 </section>
 <!-- End teaser video -->
-
-
   
 
   <!-- Paper abstract -->
