@@ -518,7 +518,7 @@
 /* ==============================================
    4. 视频样式（响应式自适应，不变形）
    ============================================== */
-.teaser-video {
+/* .teaser-video {
   width: 100%;
   height: auto;
   max-height: 550px;    /* 视频最大高度，根据需求调整 */
@@ -526,8 +526,26 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* 视频阴影，可删除 */
   display: block;
   margin: 0 auto;
+} */
+
+  .video-wrapper {
+  position: relative;
+  width: 100%;
+  /* 56.25% = 9/16，实现固定 16:9 宽高比 */
+  padding-top: 56.25%;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
+.video-wrapper .teaser-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+  
 /* ==============================================
    5. 视频描述文字样式（两端对齐+自定义字体）
    ============================================== */
