@@ -337,7 +337,7 @@
       <div class="hero-body">
         <h3 class="notice-title">Notice for Reviewers and Editors: Figure Display Clarification</h3>
         <p class="notice-text">
-          Due to a technical rendering issue during proof generation, Figure 7b and Figure 10b in the manuscript proof are not displayed correctly. The correct original versions of the two figures are provided on this page, corresponding to Figure 4b and Figure 5b respectively. We apologize for any inconvenience this may cause.
+          Due to a technical rendering issue during proof generation, Fig. 7 (b) and Fig. 10 (b) in the manuscript proof are not displayed correctly. The correct original versions of the two figures are provided on this page, corresponding to Fig. 4 (b) and Fig. 5 (b), respectively. We apologize for any inconvenience this may cause.
         </p>
       </div>
     </div>
@@ -590,24 +590,27 @@
   color: #1a1a1a;
 }
 
-  /* ==============================================
-   公告提示块样式（紧凑版 + 红色标题）
+/* ==============================================
+   公告提示块（与内容同宽 + 紧凑版 + 红色标题）
    ============================================== */
+/* 外层只负责上下间距，不做视觉样式 */
 .notice-block {
+  margin: 0.4rem 0; 
+}
+
+/* 把背景、边框、圆角都放到内部容器，宽度自动和视频/正文对齐 */
+.notice-block .hero-body {
   background-color: #fff7ed;
   border-left: 5px solid #ea580c;
   border-radius: 8px;
-  margin: 0.4rem 0; /* 上下外边距大幅缩小，减少和视频、摘要的留白 */
-}
-
-.notice-block .hero-body {
-  padding: 1rem 1.6rem !important; /* 内部上下内边距收紧，整体更紧凑 */
+  padding: 1rem 1.6rem !important; /* 内部上下内边距，控制整体紧凑度 */
+  box-sizing: border-box;
 }
 
 .notice-title {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #dc2626; /* 标题改为正红色，醒目且正式 */
+  color: #dc2626; /* 红色标题 */
   margin-bottom: 0.5rem;
   line-height: 1.4;
 }
@@ -616,7 +619,8 @@
   font-size: 1rem;
   line-height: 1.7;
   color: #333333;
-  text-align: justify;
+  text-align: justify; /* 两端对齐 */
+  text-justify: inter-word;
   margin: 0;
 }
   
