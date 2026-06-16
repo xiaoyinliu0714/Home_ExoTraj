@@ -467,16 +467,24 @@
    全局基础字体与渲染优化
    ============================================== */
 #main-content {
-  /* 跨平台高清字体栈：英文优先无衬线字体，中文匹配系统原生高清字体 */
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI",
                "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
                "Source Han Sans CN", "Noto Sans CJK SC", sans-serif;
-  /* 开启字体抗锯齿，提升清晰度 */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   color: #222;
 }
+
+/* ========== 核心修改：统一收窄内容宽度 ========== */
+/* 桌面端（屏幕≥1024px）限制最大宽度，数值越小页面越窄 */
+@media screen and (min-width: 1024px) {
+  #main-content .container.is-max-desktop {
+    max-width: 900px !important;  /* 按需调整此数值：800px更窄，1000px更宽 */
+    margin: 0 auto; /* 始终居中 */
+  }
+}
+/* ============================================== */
 
 /* ==============================================
    1. 论文标题样式优化
@@ -486,7 +494,6 @@
   line-height: 1.4 !important;
   margin-bottom: 0.5rem !important;
   font-weight: 700 !important;
-  /* 标题使用更优的字重和间距，提升层级感 */
   letter-spacing: -0.01em;
 }
 
@@ -505,7 +512,6 @@
   margin-top: 0.2rem !important;
 }
 
-/* 按钮交互优化 */
 .external-link.button {
   transition: all 0.2s ease;
 }
@@ -528,12 +534,11 @@
 .video-wrapper {
   position: relative;
   width: 100%;
-  /* 标准16:9比例，适配绝大多数视频 */
   padding-top: 56.25%;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-  background: #f5f5f5; /* 加载占位背景，避免空白闪烁 */
+  background: #f5f5f5;
 }
 
 .video-wrapper .teaser-video {
@@ -543,7 +548,6 @@
   width: 100%;
   height: 100%;
   border: none;
-  /* 优化视频渲染性能 */
   transform: translateZ(0);
 }
 
@@ -552,17 +556,14 @@
    ============================================== */
 .custom-video-desc,
 .custom-image-desc {
-  /* 统一字体体系，保证全平台清晰显示 */
   font-family: inherit;
   font-size: 1.05rem;
   font-weight: 400;
   line-height: 1.75;
   color: #333333;
   
-  /* 核心：左右两端对齐 */
   text-align: justify;
   text-justify: inter-word;
-  /* 优化英文单词断行 */
   word-break: normal;
   overflow-wrap: break-word;
   
@@ -571,7 +572,6 @@
   margin-bottom: 0;
 }
 
-/* 说明文字内的加粗标签优化 */
 .custom-video-desc strong,
 .custom-image-desc strong {
   font-weight: 600;
@@ -614,9 +614,7 @@
   display: block;
   margin: 0 auto;
   object-fit: contain;
-  /* 图片加载平滑过渡 */
   transition: opacity 0.3s ease, transform 0.3s ease;
-  /* 图片高清渲染 */
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
@@ -626,13 +624,11 @@
   box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 
-/* 图片容器间距统一 */
 .hero.is-small .hero-body {
   padding-top: 2.5rem !important;
   padding-bottom: 2.5rem !important;
 }
 
-/* 区块标题优化 */
 #main-content .title.is-3 {
   font-weight: 600;
   color: #1a1a1a;
