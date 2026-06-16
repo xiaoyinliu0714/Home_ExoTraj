@@ -490,10 +490,17 @@
 
 /* ========== 核心修改：统一收窄内容宽度 ========== */
 /* 桌面端（屏幕≥1024px）限制最大宽度，数值越小页面越窄 */
+/* ========== 核心修改：标题单独加宽，正文保持原宽度 ========== */
 @media screen and (min-width: 1024px) {
+  /* 全局正文/视频/图片容器保持900px宽度不变 */
   #main-content .container.is-max-desktop {
-    max-width: 900px !important;  /* 按需调整此数值：800px更窄，1000px更宽 */
-    margin: 0 auto; /* 始终居中 */
+    max-width: 900px !important;
+    margin: 0 auto;
+  }
+
+  /* 仅顶部标题作者区块单独加宽，数值越大标题区域越宽 */
+  #main-content > .hero:first-child .container.is-max-desktop {
+    max-width: 1000px !important; /* 按需调整，比如1200px会更宽 */
   }
 }
 /* ============================================== */
