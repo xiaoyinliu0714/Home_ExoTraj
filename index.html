@@ -240,11 +240,11 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
+            <!-- 论文标题 -->
             <h1 class="title is-1 publication-title">ExoTraj: A General Lower-limb Exoskeleton Assistance Policy for Complex Environments</h1>
             
             <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
+              <!-- 作者列表 -->
               <span class="author-block">
                 <a href="https://xiaoyinliu0714.github.io/" target="_blank">Xiao-Yin Liu</a><sup></sup>,
               </span>
@@ -263,25 +263,23 @@
             </div>
 
             <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your institution and conference/journal info -->
+              <!-- 单位与通讯作者标注 -->
               <span class="author-block">Institute of Automation, Chinese Academy of Sciences</span>
-              <!-- TODO: Remove this line if no corresponding authors -->
               <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Corresponding Authors</small></span>
             </div>
 
             <div class="column has-text-centered">
-              <!-- TODO: Update with your arXiv paper ID -->
+              <!-- 功能按钮区 -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2606.16876>" target="_blank"
+                <a href="https://arxiv.org/abs/2606.16876" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Page</span>
+                  <span>Paper</span>
                 </a>
               </span>
 
-              <!-- TODO: Add your supplementary material PDF or remove this section -->
               <span class="link-block">
                 <a href="https://github.com/xiaoyinliu0714/Home_ExoTraj/blob/master/ExoTraj/data/Movie1.mp4" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
@@ -292,7 +290,6 @@
                 </a>
               </span>
 
-              <!-- TODO: Replace with your GitHub repository URL -->
               <span class="link-block">
                 <a href="https://github.com/YOUR REPO HERE" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
@@ -309,246 +306,234 @@
     </div>
   </section>
 
-<!-- Teaser video -->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- 新增比例容器 -->
-      <div class="video-wrapper">
-        <iframe 
-          id="tree"
-          class="teaser-video"
-          src="https://www.youtube-nocookie.com/embed/j25D0YevBWc"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
+  <!-- Teaser video -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div class="video-wrapper">
+          <iframe 
+            id="tree"
+            class="teaser-video"
+            src="https://www.youtube-nocookie.com/embed/j25D0YevBWc"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
 
-      <h2 class="subtitle custom-video-desc">
-        <strong> Movie 1:</strong> The assistance performance of ExoTraj in complex outdoor environments. ExoTraj policy performs real-time trajectory prediction and torque optimization. It supports a range of assistance tasks, including walking on uneven grass, climbing rocky slopes, variable-speed running, obstacle crossing, and sudden stops and starts. The policy can be adapted to high-dynamic tasks, delivering real-time and efficient assistance.
-      </h2>
+        <h2 class="subtitle custom-video-desc">
+          <strong>Movie 1:</strong> The assistance performance of ExoTraj in complex outdoor environments. ExoTraj policy performs real-time trajectory prediction and torque optimization. It supports a range of assistance tasks, including walking on uneven grass, climbing rocky slopes, variable-speed running, obstacle crossing, and sudden stops and starts. The policy can be adapted to high-dynamic tasks, delivering real-time and efficient assistance.
+        </h2>
+      </div>
     </div>
-  </div>
-</section>
-<!-- End teaser video -->
+  </section>
+  <!-- End teaser video -->
   
 
   <!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">   
-    <div class="columns is-centered">
-      <!-- 移除了is-four-fifths，确保宽度与视频部分一致 -->
-      <div class="column">
-        <h2 class="title is-3 has-text-centered">Abstract</h2>
-        <!-- 添加自定义类custom-abstract，移除原有的has-text-justified（由CSS统一控制） -->
-        <div class="content custom-abstract">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-           Adaptive torque prediction in dynamic exoskeleton scenarios requires expensive motion capture systems, which are infeasible in complex outdoor environments. Trajectory prediction has emerged as one of the effective approaches to address such an issue. However, the core challenges of exoskeleton trajectory prediction are twofold: 1) establishing the mapping from multi-modal features to trajectory information; 2) constructing the mapping from trajectory to torque. For the former, most existing methods perform only single-step prediction in dynamic scenarios and neglect inter-subject trajectory variability, thereby limiting the trajectory optimization space and prediction generalization. To address this, this paper proposes a fast flow matching (FM) method that enables accurate trajectory prediction and better generalization with accelerated inference for real-time performance, where trajectory generation errors and encoded observations are used to guide the training direction. For the second challenge, due to the high dynamics of the human-robot system and the strong coupling between perception and control, simple control methods struggle to achieve efficient assistance based on the predicted trajectory. This paper utilizes model predictive control (MPC) and designs a novel optimization objective to optimize torque, ensuring the exoskeleton achieves comfortable and robust assistance. By integrating the above two components, the unified policy, denoted as ExoTraj, is developed to enable adaptive assistance in complex outdoor scenarios without high data acquisition cost. Experimental results show that compared to traditional methods, ExoTraj reduces cross-subject prediction error by 14.0% during the online phase and maintains robustness against external noise. Relative to the zero torque condition, ExoTraj decreases metabolic rate by 11.5%-24.4%, heart rate by 1.7%-19.5%, and peak muscle activation levels by 10.9%-41.3%, respectively. This progress facilitates the deployment of exoskeletons toward viable community-wide adoption.
-          </p>
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">   
+      <div class="columns is-centered">
+        <div class="column">
+          <h2 class="title is-3 has-text-centered">Abstract</h2>
+          <div class="content custom-abstract">
+            <p>
+             Adaptive torque prediction in dynamic exoskeleton scenarios requires expensive motion capture systems, which are infeasible in complex outdoor environments. Trajectory prediction has emerged as one of the effective approaches to address such an issue. However, the core challenges of exoskeleton trajectory prediction are twofold: 1) establishing the mapping from multi-modal features to trajectory information; 2) constructing the mapping from trajectory to torque. For the former, most existing methods perform only single-step prediction in dynamic scenarios and neglect inter-subject trajectory variability, thereby limiting the trajectory optimization space and prediction generalization. To address this, this paper proposes a fast flow matching (FM) method that enables accurate trajectory prediction and better generalization with accelerated inference for real-time performance, where trajectory generation errors and encoded observations are used to guide the training direction. For the second challenge, due to the high dynamics of the human-robot system and the strong coupling between perception and control, simple control methods struggle to achieve efficient assistance based on the predicted trajectory. This paper utilizes model predictive control (MPC) and designs a novel optimization objective to optimize torque, ensuring the exoskeleton achieves comfortable and robust assistance. By integrating the above two components, the unified policy, denoted as ExoTraj, is developed to enable adaptive assistance in complex outdoor scenarios without high data acquisition cost. Experimental results show that compared to traditional methods, ExoTraj reduces cross-subject prediction error by 14.0% during the online phase and maintains robustness against external noise. Relative to the zero torque condition, ExoTraj decreases metabolic rate by 11.5%-24.4%, heart rate by 1.7%-19.5%, and peak muscle activation levels by 10.9%-41.3%, respectively. This progress facilitates the deployment of exoskeletons toward viable community-wide adoption.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+  </section>
+  <!-- End paper abstract -->
 
-  <!-- Research Result Image (Replaced Carousel) -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      
-          <!-- ✅ 新增：靠左的大标题 + 一段话 -->
-      <div class="has-text-left mb-5">
-        <h2 class="title is-3">1. Problem Formulation</h2>
-        <!-- <p class="subtitle is-5">
-          This is a brief introductory paragraph about your research results.
-          You can explain the context, methodology, or key findings here.
-        </p> -->
-      </div>
-      
-      <!-- 单张图片容器，与视频容器结构完全一致 -->
-      <div class="result-image-container">
-        <!-- TODO: Replace with your research result image -->
-        <img src="ExoTraj/data/Fig_1.png" 
-             alt="Research result visualization" 
-             loading="lazy"
-             class="result-image"/>
-        <!-- TODO: Replace with your image description -->
-        <h2 class="subtitle custom-image-desc">
-          <strong> Figure 1: <strong> Schematic overview of problems and solutions for exoskeleton assistance in complex environments. (a) shows that outdoor motion-capture-based data acquisition is cost-prohibitive and infeasible, whereas direct trajectory measurements are readily obtainable. (b) indicates that substantial inter-subject motor variability demands effective fusion of multi-distribution data for real-time, precise cross-subject and cross-task trajectory prediction. (c) reveals that human-exoskeleton systems are highly dynamic with coupled perception and control, calling for an efficient, robust, and real-time optimization scheme to ensure assistance performance.
-        </h2>
+  <!-- Research Result 1 -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="has-text-left mb-5">
+          <h2 class="title is-3">1. Problem Formulation</h2>
+        </div>
+        
+        <div class="result-image-container">
+          <img src="ExoTraj/data/Fig_1.png" 
+               alt="Research result visualization" 
+               loading="lazy"
+               class="result-image"/>
+          <h2 class="subtitle custom-image-desc">
+            <strong>Figure 1:</strong> Schematic overview of problems and solutions for exoskeleton assistance in complex environments. (a) shows that outdoor motion-capture-based data acquisition is cost-prohibitive and infeasible, whereas direct trajectory measurements are readily obtainable. (b) indicates that substantial inter-subject motor variability demands effective fusion of multi-distribution data for real-time, precise cross-subject and cross-task trajectory prediction. (c) reveals that human-exoskeleton systems are highly dynamic with coupled perception and control, calling for an efficient, robust, and real-time optimization scheme to ensure assistance performance.
+          </h2>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End research result image -->
+  </section>
+  <!-- End research result 1 -->
 
-
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="has-text-left mb-5">
-        <h2 class="title is-3">2. Framework of ExoTraj Policy</h2>
-        <!-- <p class="subtitle is-5">
-          This is a brief introductory paragraph about your research results.
-          You can explain the context, methodology, or key findings here.
-        </p> -->
-      </div>
-      
-      <!-- 单张图片容器，与视频容器结构完全一致 -->
-      <div class="result-image-container">
-        <!-- TODO: Replace with your research result image -->
-        <img src="ExoTraj/data/Fig_2.png" 
-             alt="Research result visualization" 
-             loading="lazy"
-             class="result-image"/>
-        <!-- TODO: Replace with your image description -->
-        <h2 class="subtitle custom-image-desc">
-          <strong> Figure 2: <strong> The hierarchical framework of assistance policy ExoTraj: i) the high-level controller maps from multi-modal features to trajectory; ii) the low-level controller maps from trajectory to torque. The process begins by encoding the observation to guide the learning of the velocity field of flow matching, and the one-step iteration enables the rapid generation of joint trajectories. Subsequently, a model predictive control scheme is employed to optimize the motor torque output for efficient assistance. Ultimately, this pipeline ensures the delivery of safe and comfortable assistance for complex outdoor environments.
-        </h2>
+  <!-- Research Result 2 -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="has-text-left mb-5">
+          <h2 class="title is-3">2. Framework of ExoTraj Policy</h2>
+        </div>
+        
+        <div class="result-image-container">
+          <img src="ExoTraj/data/Fig_2.png" 
+               alt="Research result visualization" 
+               loading="lazy"
+               class="result-image"/>
+          <h2 class="subtitle custom-image-desc">
+            <strong>Figure 2:</strong> The hierarchical framework of assistance policy ExoTraj: i) the high-level controller maps from multi-modal features to trajectory; ii) the low-level controller maps from trajectory to torque. The process begins by encoding the observation to guide the learning of the velocity field of flow matching, and the one-step iteration enables the rapid generation of joint trajectories. Subsequently, a model predictive control scheme is employed to optimize the motor torque output for efficient assistance. Ultimately, this pipeline ensures the delivery of safe and comfortable assistance for complex outdoor environments.
+          </h2>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End research result image --> 
+  </section>
+  <!-- End research result 2 -->
 
- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="has-text-left mb-5">
-        <h2 class="title is-3">3. Experimental Results</h2>
-      </div>
-            <div class="has-text-left mb-5">
-        <h2 class="title is-5">3.1 Prediction Performance</h2>
-      </div>
-      <!-- 单张图片容器，与视频容器结构完全一致 -->
-      <div class="result-image-container">
-        <!-- TODO: Replace with your research result image -->
-        <img src="ExoTraj/data/Fig_3.png" 
-             alt="Research result visualization" 
-             loading="lazy"
-             class="result-image"/>
-        <!-- TODO: Replace with your image description -->
-        <h2 class="subtitle custom-image-desc">
-          <strong> Figure 3: <strong> Comparison of online trajectory prediction among Fast FM, TCN, and Transformer for six activities: running, obstacle crossing, leg swing pause, sit-to-stand, squatting, and stair climbing. For highly dynamic movements, the maximum prediction error (ADE) is reduced by up to 33.3% and 53.0% (run movement) compared with TCN and Transformer, respectively. The average error of fast FM is reduced by 21.7% and 18.6% for TCN and Transformer, respectively.
-        </h2>
+  <!-- Research Result 3 -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="has-text-left mb-5">
+          <h2 class="title is-3">3. Experimental Results</h2>
+        </div>
+        <div class="has-text-left mb-5">
+          <h2 class="title is-5">3.1 Prediction Performance</h2>
+        </div>
+        
+        <div class="result-image-container">
+          <img src="ExoTraj/data/Fig_3.png" 
+               alt="Research result visualization" 
+               loading="lazy"
+               class="result-image"/>
+          <h2 class="subtitle custom-image-desc">
+            <strong>Figure 3:</strong> Comparison of online trajectory prediction among Fast FM, TCN, and Transformer for six activities: running, obstacle crossing, leg swing pause, sit-to-stand, squatting, and stair climbing. For highly dynamic movements, the maximum prediction error (ADE) is reduced by up to 33.3% and 53.0% (run movement) compared with TCN and Transformer, respectively. The average error of fast FM is reduced by 21.7% and 18.6% for TCN and Transformer, respectively.
+          </h2>
+        </div>
       </div>
     </div>
-  </div>
-   </section>
+  </section>
+  <!-- End research result 3 -->
 
-   <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="has-text-left mb-5">
-        <h2 class="title is-5">3.2 Optimization Performance</h2>
-      </div>
-      
-      <!-- 单张图片容器，与视频容器结构完全一致 -->
-      <div class="result-image-container">
-        <!-- TODO: Replace with your research result image -->
-        <img src="ExoTraj/data/Fig_4.png" 
-             alt="Research result visualization" 
-             loading="lazy"
-             class="result-image"/>
-        <!-- TODO: Replace with your image description -->
-        <h2 class="subtitle custom-image-desc">
-          <strong> Figure 4: <strong> Torque optimization comparison results. (a) illustrates the torque optimization performance of the PID controller.When prediction deviation occurs, PID control is prone to oscillation, which impairs perception accuracy, further degrades assistance performance and leads to a vicious cycle. (b) compares the optimized torque profiles obtained via MPC optimization before and after injecting Gaussian noise into the predicted trajectories. Under external disturbance attacks, the MPC-optimized torque retains smoothness with favorable robustness.
-        </h2>
+  <!-- Research Result 4 -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="has-text-left mb-5">
+          <h2 class="title is-5">3.2 Optimization Performance</h2>
+        </div>
+        
+        <div class="result-image-container">
+          <img src="ExoTraj/data/Fig_4.png" 
+               alt="Research result visualization" 
+               loading="lazy"
+               class="result-image"/>
+          <h2 class="subtitle custom-image-desc">
+            <strong>Figure 4:</strong> Torque optimization comparison results. (a) illustrates the torque optimization performance of the PID controller.When prediction deviation occurs, PID control is prone to oscillation, which impairs perception accuracy, further degrades assistance performance and leads to a vicious cycle. (b) compares the optimized torque profiles obtained via MPC optimization before and after injecting Gaussian noise into the predicted trajectories. Under external disturbance attacks, the MPC-optimized torque retains smoothness with favorable robustness.
+          </h2>
+        </div>
       </div>
     </div>
-  </div>
-   </section>
-  
+  </section>
+  <!-- End research result 4 -->
 
-     <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="has-text-left mb-5">
-        <h2 class="title is-5">3.3 Assistance Performance</h2>
-      </div>
-      
-      <!-- 单张图片容器，与视频容器结构完全一致 -->
-      <div class="result-image-container">
-        <!-- TODO: Replace with your research result image -->
-        <img src="ExoTraj/data/Fig_5.png" 
-             alt="Research result visualization" 
-             loading="lazy"
-             class="result-image"/>
-        <!-- TODO: Replace with your image description -->
-        <h2 class="subtitle custom-image-desc">
-          <strong> Figure 5: <strong> Performance comparison results under three types of assistance conditions. (a) presents the metabolic rate and heart rate results across three terrain types: level ground, sloped terrain, and staircase. Compared to the zero torque condition, the user's metabolic rate and heart rate are reduced by 11.5%-24.4% and 1.7%-19.5%, respectively. (b) provides the comparative results of metabolic rate, average muscle activation, and heart rate after walking along a prescribed route on outdoor complex terrain under the three assistance conditions. Compared with the zero torque condition, ExoTraj yields relative reductions of 14.7% in metabolic cost, 9.8% in heart rate, and 21.5% in muscle activation.
-        </h2>
+  <!-- Research Result 5 -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="has-text-left mb-5">
+          <h2 class="title is-5">3.3 Assistance Performance</h2>
+        </div>
+        
+        <div class="result-image-container">
+          <img src="ExoTraj/data/Fig_5.png" 
+               alt="Research result visualization" 
+               loading="lazy"
+               class="result-image"/>
+          <h2 class="subtitle custom-image-desc">
+            <strong>Figure 5:</strong> Performance comparison results under three types of assistance conditions. (a) presents the metabolic rate and heart rate results across three terrain types: level ground, sloped terrain, and staircase. Compared to the zero torque condition, the user's metabolic rate and heart rate are reduced by 11.5%-24.4% and 1.7%-19.5%, respectively. (b) provides the comparative results of metabolic rate, average muscle activation, and heart rate after walking along a prescribed route on outdoor complex terrain under the three assistance conditions. Compared with the zero torque condition, ExoTraj yields relative reductions of 14.7% in metabolic cost, 9.8% in heart rate, and 21.5% in muscle activation.
+          </h2>
+        </div>
       </div>
     </div>
-  </div>
-   </section>
+  </section>
+  <!-- End research result 5 -->
   
 <style>
 /* ==============================================
-   1. 论文标题样式（强制覆盖Bulma默认，绝对生效）
+   全局基础字体与渲染优化
    ============================================== */
-#main-content .publication-title {
-  font-size: 2.2rem !important;    /* 核心调整项：原Bulma is-1默认约3rem */
-  line-height: 1.4 !important;     /* 标题行高，避免多行时太挤 */
-  margin-bottom: 0.5rem !important;/* 标题与作者列表之间的间距 */
-  font-weight: 800 !important;     /* 可选：调整标题粗细，600=半粗体 */
+#main-content {
+  /* 跨平台高清字体栈：英文优先无衬线字体，中文匹配系统原生高清字体 */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI",
+               "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+               "Source Han Sans CN", "Noto Sans CJK SC", sans-serif;
+  /* 开启字体抗锯齿，提升清晰度 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #222;
 }
 
 /* ==============================================
-   2. 作者与链接按钮的间距调整
+   1. 论文标题样式优化
    ============================================== */
-/* 缩小最后一个作者信息块的底部外边距（核心调整项） */
-.publication-authors:last-child {
-  margin-bottom: 0.1rem !important; /* 推荐0.3-1.0rem，数值越小间距越窄 */
+#main-content .publication-title {
+  font-size: 2.2rem !important;
+  line-height: 1.4 !important;
+  margin-bottom: 0.5rem !important;
+  font-weight: 700 !important;
+  /* 标题使用更优的字重和间距，提升层级感 */
+  letter-spacing: -0.01em;
 }
 
-/* 消除链接按钮所在列的默认顶部内边距 */
+/* ==============================================
+   2. 作者与链接按钮间距
+   ============================================== */
+.publication-authors:last-child {
+  margin-bottom: 0.1rem !important;
+}
+
 #main-content .column.has-text-centered:has(.link-block) {
   padding-top: 0 !important;
 }
 
-/* 微调第一个链接按钮的顶部外边距 */
 .link-block:first-child {
   margin-top: 0.2rem !important;
 }
 
+/* 按钮交互优化 */
+.external-link.button {
+  transition: all 0.2s ease;
+}
+.external-link.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
 /* ==============================================
-   3. 视频与上方内容的间距调整
+   3. 视频区域优化
    ============================================== */
-/* 缩小上方标题作者区域的底部内边距 */
 #main-content > .hero:first-child .hero-body {
-  padding-bottom: 0.2rem !important; /* 原默认约3rem，数值越小间距越窄 */
+  padding-bottom: 0.2rem !important;
 }
 
-/* 缩小视频区域的顶部内边距 */
 .hero.teaser .hero-body {
-  padding-top: 0.2rem !important;  /* 原默认约3rem，数值越小间距越窄 */
+  padding-top: 0.2rem !important;
 }
 
-/* ==============================================
-   4. 视频样式（响应式自适应，不变形）
-   ============================================== */
-/* .teaser-video {
-  width: 100%;
-  height: auto;
-  max-height: 550px;    /* 视频最大高度，根据需求调整 */
-  border-radius: 8px;   /* 视频圆角，可删除 */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* 视频阴影，可删除 */
-  display: block;
-  margin: 0 auto;
-} */
-
-  .video-wrapper {
+.video-wrapper {
   position: relative;
   width: 100%;
-  /* 56.25% = 9/16，实现固定 16:9 宽高比 */
-  padding-top: 70%;
-  border-radius: 8px;
+  /* 标准16:9比例，适配绝大多数视频 */
+  padding-top: 56.25%;
+  border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  background: #f5f5f5; /* 加载占位背景，避免空白闪烁 */
 }
 
 .video-wrapper .teaser-video {
@@ -558,90 +543,108 @@
   width: 100%;
   height: 100%;
   border: none;
+  /* 优化视频渲染性能 */
+  transform: translateZ(0);
 }
-  
+
 /* ==============================================
-   5. 视频描述文字样式（两端对齐+自定义字体）
+   4. 视频/图片说明文字（两端对齐+高清字体）
    ============================================== */
-.custom-video-desc {
-  /* 系统字体优先级，国内访问无问题 */
-  font-family: 'Inter', "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "SimHei", sans-serif;
-  font-size: 1.15rem;   /* 文字大小 */
-  font-weight: 400;     /* 文字粗细 */
-  line-height: 1.6;     /* 行高，长文本建议1.6-1.8 */
-  color: #333333;       /* 文字颜色 */
+.custom-video-desc,
+.custom-image-desc {
+  /* 统一字体体系，保证全平台清晰显示 */
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #333333;
   
-  /* 两端对齐核心样式 */
+  /* 核心：左右两端对齐 */
   text-align: justify;
-  text-justify: inter-word; /* 优化英文单词间距 */
+  text-justify: inter-word;
+  /* 优化英文单词断行 */
+  word-break: normal;
+  overflow-wrap: break-word;
   
-  margin-top: 1.8rem;   /* 文字与视频的间距 */
-  padding: 0 0.5rem;    /* 小屏幕左右留白 */
+  margin-top: 1.5rem;
+  padding: 0 0.5rem;
+  margin-bottom: 0;
 }
+
+/* 说明文字内的加粗标签优化 */
+.custom-video-desc strong,
+.custom-image-desc strong {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
 /* ==============================================
-   新增：摘要样式（与视频描述完全统一）
+   5. 摘要样式统一
    ============================================== */
 .custom-abstract {
-  /* 与视频描述完全一致的字体属性 */
-  font-family: 'Inter', "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "SimHei", sans-serif !important;
-  font-size: 1.15rem !important;
+  font-family: inherit !important;
+  font-size: 1.05rem !important;
   font-weight: 400 !important;
-  line-height: 1.6 !important;
+  line-height: 1.75 !important;
   color: #333333 !important;
   
-  /* 与视频描述完全一致的对齐和边距 */
   text-align: justify !important;
   text-justify: inter-word !important;
   padding: 0 1.0rem !important;
   
-  /* 覆盖Bulma .content的默认样式 */
   margin: 0 !important;
 }
 
-/* 覆盖Bulma .content中p标签的默认样式 */
 .custom-abstract p {
-  margin-bottom: 0 !important; /* 单段文本去掉底部多余间距 */
+  margin-bottom: 0 !important;
   font-size: inherit !important;
   line-height: inherit !important;
   color: inherit !important;
 }
 
-  /* 图片样式：与视频完全相同的尺寸、圆角、阴影 */
+/* ==============================================
+   6. 图片展示优化
+   ============================================== */
 .result-image {
   width: 100%;
   height: auto;
-  max-height: 550px; /* 与视频最大高度保持一致，可根据图片比例调整 */
-  border-radius: 8px; /* 与视频圆角相同 */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* 与视频阴影相同 */
+  max-height: 580px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
   display: block;
   margin: 0 auto;
-  object-fit: contain; /* 确保图片完整显示，不裁剪 */
+  object-fit: contain;
+  /* 图片加载平滑过渡 */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  /* 图片高清渲染 */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
-/* 图片描述样式：继承视频描述的所有字体属性，仅改为居中对齐 */
-.custom-image-desc {
-  /* 继承视频描述的所有基础样式 */
-  font-family: 'Inter', "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "SimHei", sans-serif;
-  font-size: 1.15rem;
-  font-weight: 400;
-  line-height: 1.6;
-  color: #333333;
-  
-  /* 仅修改对齐方式为居中 */
-  text-align: center;
-  
-  /* 与视频描述相同的上下间距和左右边距 */
-  margin-top: 1.8rem;
-  padding: 0 0.5rem;
-  margin-bottom: 0; /* 移除subtitle默认的底部间距 */
+.result-image:hover {
+  transform: scale(1.005);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 
-/* 可选：调整图片区域的上下内边距，与其他部分保持一致 */
+/* 图片容器间距统一 */
 .hero.is-small .hero-body {
-  padding-top: 3rem !important;
-  padding-bottom: 3rem !important;
+  padding-top: 2.5rem !important;
+  padding-bottom: 2.5rem !important;
+}
+
+/* 区块标题优化 */
+#main-content .title.is-3 {
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+#main-content .title.is-5 {
+  font-weight: 600;
+  color: #222;
 }
 </style>
+</main>
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
